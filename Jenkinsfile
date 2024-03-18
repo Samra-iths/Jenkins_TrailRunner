@@ -10,7 +10,7 @@ pipeline {
                 }
             }
       }
-    }
+   
 
       stage('Test') {
 
@@ -33,4 +33,6 @@ pipeline {
                 }
             }
       }
+
+    }
 }

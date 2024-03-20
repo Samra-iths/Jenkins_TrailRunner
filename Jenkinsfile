@@ -9,7 +9,7 @@ pipeline {
                 bat "mvn compile"
                 }
             }
-      }
+      
    
 
       stage('Test') {
@@ -18,7 +18,7 @@ pipeline {
                 {
                 bat "mvn test"
                 }
-            }
+            
  
             post {
                 always {
@@ -30,7 +30,7 @@ pipeline {
                     junit '**/TEST*.xml' 
                    }
 
-                }
+                
             }
       }
       

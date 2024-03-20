@@ -5,7 +5,7 @@ pipeline {
            
       stage('Build') {
             steps {
-                dir("TrailRunner"){
+                {
                 bat "mvn compile"
                 }
             }
@@ -15,14 +15,14 @@ pipeline {
       stage('Test') {
 
             steps {
-                dir("TrailRunner"){
+                {
                 bat "mvn test"
                 }
             }
  
             post {
                 always {
-                   dir("TrailRunner"){ jacoco(
+                   { jacoco(
                     execPattern: 'target/*.exec',
                     classPattern: 'target/classes',
                     sourcePattern:'src/main/java',

@@ -19,7 +19,7 @@ Sign in
 
 Choose and book car
 
-    Given The user is at home page
+    Given The user is at home page hamid
     And The user sign in with her credential    ${email}    ${password}
     When The user selects the dates and the car
     And The User Pays    ${cardNumber}     sam    4    5    234
